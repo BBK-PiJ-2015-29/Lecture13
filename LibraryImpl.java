@@ -30,6 +30,16 @@ public class LibraryImpl implements Library {
 		
 		return newId;
 	}
+
+	/**
+	 * A method to return the ID number of an existing user or to 
+	 * generate and assign a new ID number for a new user.
+	 * @return the library number
+	 */
+	public int getLibId(String name) {
+		return 0;
+	}
+
 	
 	/**
 	 * An accessor method for the maximum number of books
