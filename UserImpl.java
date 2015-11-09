@@ -5,7 +5,7 @@
 public class UserImpl implements User {
 	
 	private String name;
-	private int LibId = -1;
+	private int libId = -1;
 	private Library registeredLibrary;
 	
 	public UserImpl(String name){
@@ -25,7 +25,7 @@ public class UserImpl implements User {
 	 * @return the user's Library ID# as an int
 	 */
 	public int getLibId() {
-		return this.LibId;
+		return this.libId;
 	}
 	
 	/**
@@ -33,7 +33,8 @@ public class UserImpl implements User {
 	 */
 	public int register(Library library) {
 		this.registeredLibrary = library;
-		return library.getLibId();
+		this.libId = library.getLibId();
+		return libId;
 	}
 	
 	/**

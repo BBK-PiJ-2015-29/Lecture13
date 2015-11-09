@@ -46,7 +46,8 @@ public class TestUser {
 	@Test
 	public void testRegisterMethod() {
 		int output = user1.register(mockLib);
-		assertEquals(1001, output);
+		assertEquals(1000, output);
+		assertEquals(1000, user1.getLibId());
 	
 	}
 	

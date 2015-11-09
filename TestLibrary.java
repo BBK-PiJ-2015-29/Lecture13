@@ -11,27 +11,34 @@ public class TestLibrary {
 	
 	@Before
 	public void SetUp() {
-		myLib = new LibraryImpl("Ollieton Library");
+		myLib = new LibraryImpl("Library1");
 		user1 = new UserImpl("Santi Cazorla");
 	}
 	
 	@Test
 	public void testCreate() {
 		assertNotNull(myLib);
-		assertEquals("Ollieton Library", myLib.getName());
+		assertEquals("Library1", myLib.getName());
 		assertEquals(5, myLib.getMaxBooksPerUser());
 	}
 	
 	@Test
 	public void testLibraryGetLibIdMethodForNoRegisteredUsers() {
-		assertEquals(-1, myLib.getLibId());
+		assertEquals(1000, myLib.getLibId());
 	}
 	
 	@Test
 	public void testLibraryGetLibIdMethodForOneRegisteredUser() {
 		user1.register(myLib);
-		assertEquals(1002, myLib.getLibId());
+		assertEquals(1001, myLib.getLibId());
 	}
 	
+	@Test
+	public void testSetMaxBooksPerUser() {
+		assertEquals(5, myLib.getMaxBooksPerUser());
+		myLib.setMaxBooksPerUser(6);
+		assertEquals(6, myLib.getMaxBooksPerUser());
+	}
+
 	
 }

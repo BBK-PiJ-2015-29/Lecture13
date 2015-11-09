@@ -21,4 +21,12 @@ public interface Library {
 	 * @return the maximum number of books as an int.
 	 */
 	int getMaxBooksPerUser();
+	
+	/**
+	 * A mutator method for the maximum number of books
+	 * which can be borrowed per user at once.
+	 * @param the new maximum number of books as an int.
+	 */
+	void setMaxBooksPerUser(int newMax);
+	
 }
