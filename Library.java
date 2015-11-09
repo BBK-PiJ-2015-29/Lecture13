@@ -10,10 +10,17 @@ public interface Library {
 	String getName();
 	
 	/**
-	 * An accessor method for the ID number of a new user
+	 * An method to generate and return the ID number of a new user
 	 * @return the new user's ID as an int.
 	 */
 	int getLibId();
+	
+	/**
+	 * A method to return the ID number of an existing user or to 
+	 * generate and assign a new ID number for a new user.
+	 * @return the library number
+	 */
+	int getLibId(String name);
 	
 	/**
 	 * An accessor method for the maximum number of books
@@ -29,4 +36,6 @@ public interface Library {
 	 */
 	void setMaxBooksPerUser(int newMax);
 	
+	
+
 }

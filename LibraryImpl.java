@@ -4,7 +4,6 @@
  */
 public class LibraryImpl implements Library {
 	private String name;
-	private int libraryNumber;
 	private int maxBooksPerUser = 5;
 	private int numberOfRegisteredUsers = 0;
 	
